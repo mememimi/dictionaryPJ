@@ -1,0 +1,44 @@
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, user-scalable=yes">
+    <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.css">
+   
+  단어 수정 페이지 : 비우는 칸 없이 전부 입력해야 반영됩니다
+  <br><br>  한가지만 고치더라도 모든 값을  입력해야 하니 기존데이터를 더블클릭이나 드래그해서 Ctrl+c,Ctrl+v 를 이용해주세요...
+   
+  <div>
+    <table class="table">
+              <thead>
+                <tr>
+                  <th>단어</th>
+                  <th>품사</th>
+                  <th>뜻</th></tr>
+                  <tr ng-repeat="l in list">
+          <td>{{l.NAME}}</td>
+           <td>{{l.POS}}</td>
+            <td>{{l.MEAN}}</td>                  
+                </tr>
+              </thead>
+              
+              <tbody>
+          
+          
+          <td><input type="text" ng-model="upname" placeholder="name" /></td>
+           <td><input type="text" ng-model="uppos" placeholder="pos" /></td>
+            <td><input type="text" ng-model="upmean" placeholder="mean" /></td>
+           
+        
+        
+        </tbody>
+      </table>
+            
+      </div>
+        <form ng-submit="submitup()">
+        <input type="submit" id="submitup" value="수정" />
+         </form>
+
+<table>
+         <tr ng-repeat="k in uk">
+        <td>{{k.first}}</td>     </tr> </table>
+
+
+                

@@ -1,0 +1,55 @@
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, user-scalable=yes">
+    <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.css">
+     <form ng-submit="submit()">
+  Let's Search:
+  <input type="text" ng-model="text" name="text" />
+  <input type="submit" id="submit" value="click" />
+   </form>
+  <div>
+    
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>단어</th>
+                  <th>품사</th>
+                  <th>뜻</th>
+		  <th>예문</th>
+                  <th>해석</th>
+                  <th>출처</th>
+                  <th>url</th>
+                  <th>수정하기</th>
+                  
+                </tr>
+              </thead>
+              <tbody>
+          <tr ng-repeat="p in lists">
+          <td>{{p.NAME}}</td>
+           <td>{{p.POS}}</td>
+            <td>{{p.MEAN}}</td>
+            <td><ul type="disk"> <!--점찍어주고-->
+              <li ng-repeat="m in p.sentences">
+              {{m.eng}}</li></ul></td> <!--문장덩어리만받아와서 내부값eng들만 순서대로띄워준다-->
+            <td><ul type="disk">
+              <li ng-repeat="n in p.sentences">
+              {{n.kor}}</li></ul></td><!--배열을다출력해준다-->
+            <td><ul type="disk">
+              <li ng-repeat="ss in p.src">
+              {{ss.name}}</li></ul></td>
+            <td><ul type="disk">
+              <li ng-repeat="nn in p.src">
+              {{nn.link}}</li></ul></td>
+            <td > 
+              <a href="#update/{{p._id}}" class="btn btn-sm btn-info">
+       		 <i class="fa fa-eye"></i> modify </a>
+              </td>
+             
+         
+        </tr>
+        </tbody>
+      </table>
+      </div>
+새로 추가하러 이동:
+<a href="#add" class="btn btn-sm btn-info">
+       		 <i class="fa fa-eye"></i> GO! </a> 
+            <!--이렇게하면 경고없이 라우트이동가능  --> 

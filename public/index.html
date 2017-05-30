@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko" ng-app="ap">
+  <body>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <h1>단어사전 관리자콘솔@@</h1>
+    <h3>Admin console page , using MEAN stack</h3>
+    <h4>find English word to Korean </h4>
+    
+    **I just have only 1 data now, so please search word "omit" .. //데이터가 omit한개만 있습니다. 검색결과는 omit만 보실 수 있습니다ㅠㅠ<BR>
+     and I applied lemma module. so if you input progressive,plural form, that's OK //단어의 변형된 형태(진행형이나 복수형태 등)를 검색하셔도 원형을 출력합니다. 편하게 검색하세요<BR>
+<BR>
+    But you can add new word data!! click "GO!" button!!<BR>
+    and you can update/change my data, too -> click "modify" button<BR>
+    <a href="http://127.0.0.1:7777/" class="btn btn-sm btn-info"><i class="fa fa-eye"></i>Home</a>
+
+            <a href="#check" class="btn btn-sm btn-info">
+                 <i class="fa fa-eye"></i> 요청들어온단어 확인하러가기</a>
+                 <a href="#listnow" class="btn btn-sm btn-info">
+                 <i class="fa fa-eye"></i> Check DB state Now</a>
+
+    <div ng-view></div>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.js"></script>
+    <script src="//code.angularjs.org/1.2.25/angular-route.js"></script>
+    <script src="//code.angularjs.org/1.2.25/angular-resource.js"></script>
+  <script src="js/webapp.js"></script>
+  </body>
+</html>
+

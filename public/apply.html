@@ -1,0 +1,32 @@
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, user-scalable=yes">
+    <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.css">
+   
+  요청받은 단어 추가하는 페이지 : 비우는 칸 없이 전부 입력해야 반영됩니다
+  <br>
+   
+  <div>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>단어</th>
+                  <th>품사</th>
+                  <th>뜻</th>
+                  
+                </tr>
+              </thead>
+              <tbody >   
+            <td ng-repeat="p in listo">{{p.NAME}}</td>
+           <td><input type="text" ng-model="uppos" placeholder="pos" /></td>
+            <td><input type="text" ng-model="upmean" placeholder="mean" /></td>
+  
+        </tbody>
+      </table>
+            
+      </div>
+
+        <button ng-click="submitap()">추가</button>
+        <button ng-click="rmv()">삭제!!</button>
+<table>
+         <tr ng-repeat="k in uk">
+        <td>{{k.first}}</td>     </tr> </table>

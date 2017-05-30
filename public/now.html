@@ -1,0 +1,32 @@
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, user-scalable=yes">
+    <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.css">
+     <form ng-submit="submit()">
+data now I have
+<br>현재 데이터상태
+
+   </form>
+  <div>
+    
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>단어</th>
+                  <th>품사</th>
+                  <th>뜻</th>
+                  <th>예문</th>
+                </tr>
+              </thead>
+              <tbody>
+          <tr ng-repeat="p in lists">
+          <td>{{p.NAME}}</td>
+           <td>{{p.POS}}</td>
+            <td>{{p.MEAN}}</td>
+            <td><ul type="disk"> <!--점찍어주고-->
+              <li ng-repeat="m in p.sentences">
+              {{m.eng}}</li></ul></td> <!--문장덩어리만받아와서 내부값eng들만 순서대로띄워준다-->
+         
+        </tr>
+        </tbody>
+      </table>
+      </div>

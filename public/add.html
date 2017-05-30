@@ -1,0 +1,40 @@
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, user-scalable=yes">
+    <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.css">
+     <form ng-submit="submitadd()">
+  새로운 단어 추가하는 페이지 : 비우는 칸 없이 전부 입력해야 추가됩니다
+  
+ 
+  <div>
+    <table class="table">
+              <thead>
+                <tr>
+                  <th>단어</th>
+                  <th>품사</th>
+                  <th>뜻</th>
+                                    
+                </tr>
+              </thead>
+              
+              <tbody>
+          
+          <td><input type="text" ng-model="addname" placeholder="name" /></td>
+           <td><input type="text" ng-model="addpos" placeholder="pos" /></td>
+            <td><input type="text" ng-model="addmean" placeholder="mean" /></td>
+           
+        
+        
+        </tbody>
+      </table>
+            
+      </div>
+      
+        <input type="submit" id="submitadd" value="추가" />
+         </form>
+
+<table>
+         <tr ng-repeat="j in ok">
+        <td>{{j.first}}</td>     </tr> </table>
+
+
+                
